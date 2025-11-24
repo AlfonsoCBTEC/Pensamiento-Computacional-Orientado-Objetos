@@ -12,31 +12,52 @@ entre objetos mediante diagramas de clase y de secuencia
 */
 
 #include <iostream>
-#include "Libro.cpp"
+#include "Biblioteca.h"
+#include "Libro.h"
+#include "Usuario.h"
 
 using namespace std;
 
 int main() {
 
-    cout << "Bienvenido al sistema de gestión de biblioteca de Alfonso\n\n";
+    cout << "Bienvenido al sistema de gestion de biblioteca de Alfonso\n\n";
 
-    // Primer objeto lo cree usando el constructor vacio
+    Biblioteca mi_Biblioteca;
+
+    Usuario user_prueba("Alfonso", 100001, "12345678");
+
+    // Primer objeto libro lo cree usando el constructor vacio
     Libro libro1;
     libro1.set_autor("J.K. Rowling");
-    libro1.set_nombre("Harry Potter y la piedra filosofal");
+    libro1.set_titulo("Harry Potter y la piedra filosofal");
     libro1.set_paginas(223);
     libro1.set_isbn(123456);
 
     // Para crear este objeto use el constructor con parametros
-    Libro libro2("George Orwell", 328, "1984", 987654);
+    Libro libro2("Tiende tu cama", "Alfonso", 200, 987654);
+
+    ////Agregando los ojetos a la biblioteca
+    mi_Biblioteca.agregar_libro(libro1);
+    mi_Biblioteca.agregar_libro(libro2);
+
+    mi_Biblioteca.agregar_usuario(user_prueba);
+
+    ///ejemplo implementando los metodos de cada clase
 
     cout << "=== Libro 1 ===" << endl;
     libro1.mostrar_info();
     cout << endl;
 
-    cout << "=== Libro 2 ===" << endl;
-    libro2.mostrar_info();
+    cout<< "=== Usuario 1 ===" << endl;
+    user_prueba.mostrar_usuario();
     cout << endl;
+
+    //Mostrando el catalogo de libros ya con un metodo de la case
+    //principal biblioteca que a la vez usa metodos de clase libro
+
+    mi_Biblioteca.mostrar_catalogo();
+
+
 
     return 0;
 }
