@@ -33,9 +33,6 @@ class Usuario{
             return idUsuario;
         }
 
-        string get_contraseña(){
-            return contraseña;
-        }
 
         //Setters
 
