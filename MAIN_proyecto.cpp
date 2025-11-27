@@ -22,9 +22,12 @@ int main() {
 
     cout << "Bienvenido al sistema de gestion de biblioteca de Alfonso\n\n";
 
+    // Creacion de objetos
+
     Biblioteca mi_Biblioteca;
 
     Usuario user_prueba("Alfonso", 100001, "12345678");
+    Usuario user_prueba2("Admin", 100002, "000000");
 
     // Primer objeto libro lo cree usando el constructor vacio
     Libro libro1;
@@ -36,11 +39,20 @@ int main() {
     // Para crear este objeto use el constructor con parametros
     Libro libro2("Tiende tu cama", "Alfonso", 200, 987654);
 
+    Revista revista1("Noticias", "Alfonso", 21, 5);
+    Revista revista2("Carros", "Pepe", 2, 9);
+
     ////Agregando los ojetos a la biblioteca
     mi_Biblioteca.agregar_libro(libro1);
     mi_Biblioteca.agregar_libro(libro2);
 
     mi_Biblioteca.agregar_usuario(user_prueba);
+    mi_Biblioteca.agregar_usuario(user_prueba2);
+
+    mi_Biblioteca.agregar_revista(revista1);
+    mi_Biblioteca.agregar_revista(revista2);
+
+
 
     ///ejemplo implementando los metodos de cada clase
 
@@ -52,11 +64,15 @@ int main() {
     user_prueba.mostrar_usuario();
     cout << endl;
 
-    //Mostrando el catalogo de libros ya con un metodo de la case
-    //principal biblioteca que a la vez usa metodos de clase libro
+    cout<< "=== Revista 1 ===" << endl;
+    revista1.mostrar_info_revista();
+    cout << endl;
+
+    //Mostrando el catalogo/usuarios de la clase biblioteca
+    //que ya muestra objetos de otras clases que almaceno
 
     mi_Biblioteca.mostrar_catalogo();
-
+    mi_Biblioteca.mostrar_usuarios();
 
 
     return 0;
