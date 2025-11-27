@@ -2,13 +2,13 @@
 #define LIBRO
 
 #include <iostream>
+#include "Material.h"
+
 using namespace std;
 
-class Libro {
+class Libro : public Material {
 
 private:
-    string titulo;
-    string autor;
     int paginas;
     int isbn;
 
@@ -17,21 +17,12 @@ public:
     Libro() {}
 
     // Constructor con parámetros
-    Libro(string _titulo,  string _autor, int _paginas, int _isbn) {
-        titulo = _titulo;
-        autor = _autor;
+    Libro(string _titulo,  string _autor, int _paginas, int _isbn) : Material(_titulo, _autor) {
         paginas = _paginas;
         isbn = _isbn;
     }
 
-    // Getters
-    string get_titulo() {
-        return titulo;
-    }
-
-    string get_autor() {
-        return autor;
-    }
+    // Getters (los demas los hereda de material)
 
     int get_paginas() {
         return paginas;
@@ -42,14 +33,7 @@ public:
     }
 
     // Setters
-      void set_titulo(string _titulo) {
-        titulo = _titulo;
-    }
-
-    void set_autor(string _autor) {
-        autor = _autor;
-    }
-
+  
     void set_paginas(int _paginas) {
         paginas = _paginas;
     }
@@ -60,8 +44,7 @@ public:
 
     // Método para mostrar información del libro
     void mostrar_info() {
-        cout << "Titulo: " << titulo << endl;
-        cout << "Autor: " << autor << endl;
+        mostrar_info_basica();
         cout << "Paginas: " << paginas << endl;
         cout << "ISBN: " << isbn << endl;
     }
