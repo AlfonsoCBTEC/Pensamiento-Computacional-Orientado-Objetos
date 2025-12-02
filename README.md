@@ -1,3 +1,6 @@
+TC1033 Proyecto
+--------------
+
 Sistema de Gestión de Biblioteca 
 Autor: Alfonso Carranza Bassoco Matrícula: A01714310 Asignatura: Programación Orientada a Objetos (TC1033)
 
@@ -37,8 +40,8 @@ Tener instalado un compilador de C++ (como g++) y ejecutar:
 
 g++ main.cpp -o sistema_biblioteca
 
-# Ejecutar en Windows
+- Ejecutar en Windows
 sistema_biblioteca.exe
 
-# Ejecutar en Mac/Linux
+- Ejecutar en Mac/Linux
 ./sistema_biblioteca
