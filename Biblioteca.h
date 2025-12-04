@@ -13,7 +13,6 @@
 #ifndef BIBLIOTECA_H_
 #define BIBLIOTECA_H_
 
-#include "Prestamo.h"
 #include "Libro.h"
 #include "Usuario.h"
 #include "Revista.h"
@@ -35,8 +34,6 @@ class Biblioteca{
 
         Revista revistas[50];
         int total_revistas;
-
-        vector<Prestamo> historialPrestamos; // Ya vimos vectores en clase, ahora lo utilizo en vez de arrays
 
         string nombre;
 
@@ -105,10 +102,6 @@ class Biblioteca{
             }
         }
 
-        void agregarPrestamo(){
-            
-
-        }
 
         /*
          *Utliza el arreglo de libros y revistas y su indice.
