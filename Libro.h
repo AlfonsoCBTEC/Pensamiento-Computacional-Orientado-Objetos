@@ -1,5 +1,16 @@
-#ifndef LIBRO
-#define LIBRO
+/*
+ * Proyecto Biblioteca
+ * Alfonso Carranza Bassoco
+ * A01714310
+ */
+
+/*
+ * Clase Libro. Clase hija que hereda atributos y metodos 
+ * de clase material. 
+ */
+
+#ifndef LIBRO_H_
+#define LIBRO_H_
 
 #include <iostream>
 #include "Material.h"
@@ -24,21 +35,21 @@ public:
 
     // Getters (los demas los hereda de material)
 
-    int get_paginas() {
+    int getPaginas() {
         return paginas;
     }
 
-    int get_isbn() {
+    int getIsbn() {
         return isbn;
     }
 
     // Setters
   
-    void set_paginas(int _paginas) {
+    void setPaginas(int _paginas) {
         paginas = _paginas;
     }
 
-    void set_isbn(int _isbn) {
+    void setIsbn(int _isbn) {
         isbn = _isbn;
     }
 
@@ -51,4 +62,4 @@ public:
 };
 
 
-#endif
+#endif // LIBRO_H_
