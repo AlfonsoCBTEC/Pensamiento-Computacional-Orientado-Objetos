@@ -11,8 +11,9 @@ activos, además de servir como práctica para representar y analizar relaciones
 entre objetos mediante diagramas de clase y de secuencia
 */
 
-#include <iostream>
-#include "Biblioteca.h"
+//Bibliotecas
+#include <iostream> //Para imprimir. 
+#include "Biblioteca.h" // Aqui estan los objetos del proyecto
 #include "Libro.h"
 #include "Usuario.h"
 
@@ -31,10 +32,10 @@ int main() {
 
     // Primer objeto libro lo cree usando el constructor vacio
     Libro libro1;
-    libro1.set_autor("J.K. Rowling");
-    libro1.set_titulo("Harry Potter y la piedra filosofal");
-    libro1.set_paginas(223);
-    libro1.set_isbn(123456);
+    libro1.setAutor("J.K. Rowling");
+    libro1.setTitulo("Harry Potter y la piedra filosofal");
+    libro1.setPaginas(223);
+    libro1.setIsbn(123456);
 
     // Para crear este objeto use el constructor con parametros
     Libro libro2("Tiende tu cama", "Alfonso", 200, 987654);
