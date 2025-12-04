@@ -1,5 +1,17 @@
-#ifndef REVISTA
-#define REVISTA
+/*
+ * Proyecto Biblioteca
+ * Alfonso Carranza Bassoco
+ * A01714310
+ */
+
+/*
+ * Clase Revista. Clase hija que hereda atributos y metodos 
+ * de clase material. 
+ */
+
+
+#ifndef REVISTA_H_
+#define REVISTA_H_
 
 #include "Material.h"
 #include <iostream>
@@ -14,30 +26,30 @@ class Revista: public Material {
         int mes;
 
     public:
-
+        //Constructor vacio
         Revista() {}
-
+        //Constructor con parametros
         Revista(string _titulo, string _autor, int _numedicion, int _mes) : Material(_titulo, _autor){
             numedicion = _numedicion;
             mes = _mes;
         }
-
-        int get_numedicion(){
+        //Getters
+        int getNumedicion(){
             return numedicion;
         }
 
-        int get_mes(){
+        int getMes(){
             return mes;
         }
-
-        void set_numedicion(int _numedicion){
+        //Setters
+        void setNumedicion(int _numedicion){
             numedicion = _numedicion;
         }
 
-        void set_mes(int _mes){
+        void setMes(int _mes){
             mes = _mes;
         }
-
+        // Método para mostrar información de la revista
         void mostrar_info_revista(){
             mostrar_info_basica();
             cout << "Numero de edicion: " << numedicion << endl;
@@ -46,4 +58,4 @@ class Revista: public Material {
 
 };
 
-#endif
+#endif // REVISTA_H_
