@@ -1,0 +1,26 @@
+Ajunto este txt debido a que en mi ultima retroalimentacion del avance 3 
+se me puso que utilizo agregacion en mi diagrama cuando supuestamente uso composicion
+para la clase material y clases hijas libro y revista. Lo comente con el maestro
+erick y me pidio que lo comentara en este txt. 
+
+Seria la unica revision ya que por eso no se me toman como completos los siguientes rubros:
+
+"Toma de decisiones
+SICT0302A
+
+(Se revisan en el UML)"
+
+
+"Implemento las clases en c++ siguiendo el diseño del diagrama de clases en UML.
+Avance 3"
+-----------------------------------------------------------------------------------
+"Implementa SICT0303A
+
+(Se revisan en el código)"
+
+"Impemento composición (o agregación) sieguiendo mi diagrama de clases
+Avance 3"
+
+"Implemento clases apegadas a requerimientos a partir de un modelo.
+Avance 3"
+
