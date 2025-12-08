@@ -45,3 +45,7 @@ sistema_biblioteca.exe
 
 - Ejecutar en Mac/Linux
 ./sistema_biblioteca
+
+CORRECCIONES
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Se agrego la clase Prestamo y su relacion de composicion con la clase biblioteca en el Diagrama UML
