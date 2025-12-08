@@ -23,6 +23,7 @@ class Material{
         //Declara atributos que van a tener el comun los materiales de la biblioteca
         string titulo;
         string autor;
+        bool disponible;
 
     public:
         //Constructor por default
@@ -31,6 +32,7 @@ class Material{
         Material(string _titulo, string _autor){
             titulo = _titulo;
             autor = _autor;
+            disponible = true;
         }
 
         //Getters
@@ -41,6 +43,10 @@ class Material{
         string getAutor(){
             return autor;
         }
+
+        bool getDisponible(){
+            return disponible;
+        }
         
         //Setters
         void setTitulo(string _titulo){
@@ -49,6 +55,14 @@ class Material{
 
         void setAutor(string _autor){
             autor = _autor;
+        }
+
+        void prestar(){
+            disponible = false;
+        }
+
+        void devolver(){
+            disponible = true;
         }
 
         //Metodos
