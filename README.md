@@ -15,7 +15,7 @@ Una biblioteca necesita administrar eficientemente su inventario y el flujo de p
 FUNCIONALIDAD
 ------------------------------------------------------------------------------------------------------------------------------------------------------
  - ¿Para qué sirve este proyecto? (Alcance)
-El programa funciona a través de un menú en consola que permite las siguientes operaciones:
+El programa permite las siguientes operaciones:
 
 Altas de Materiales: Registro de nuevos Libros y Revistas en el catálogo.
 
