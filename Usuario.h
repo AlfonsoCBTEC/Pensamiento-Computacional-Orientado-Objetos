@@ -67,5 +67,4 @@ class Usuario{
         }
 
 };
-
 #endif // USUARIO_H_
