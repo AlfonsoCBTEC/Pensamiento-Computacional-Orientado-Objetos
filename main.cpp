@@ -15,6 +15,7 @@ entre objetos mediante diagramas de clase y de secuencia
 #include <iostream> //Para imprimir. 
 #include "Biblioteca.h" // Aqui estan los objetos del proyecto
 #include "Libro.h"
+#include "Revista.h"
 #include "Usuario.h"
 
 using namespace std;
@@ -37,9 +38,8 @@ int main() {
     libro1.setPaginas(223);
     libro1.setIsbn(123456);
 
-    // Para crear este objeto use el constructor con parametros
+    // Para crear estos objetos use el constructor con parametros
     Libro libro2("Tiende tu cama", "Alfonso", 200, 987654);
-
     Revista revista1("Noticias", "Alfonso", 21, 5);
     Revista revista2("Carros", "Pepe", 2, 9);
 
@@ -69,12 +69,28 @@ int main() {
     revista1.mostrar_info_revista();
     cout << endl;
 
+    ///registrando los primeros prestamos
+
+    mi_Biblioteca.registrar_prestamo(10001, 987654, "07/12/25", "Libro");
+    mi_Biblioteca.registrar_prestamo(10002, 21, "07/12/25", "Revista");
+
+    //registrando mismo libro para que se vea que ya esta registrado
+
+    mi_Biblioteca.registrar_prestamo(10002, 987654, "30/10/26", "Libro");
+
+    //Devolviendo el libro
+    mi_Biblioteca.devolver_material(987654, "Libro");
+
+
     //Mostrando el catalogo/usuarios de la clase biblioteca
     //que ya muestra objetos de otras clases que almaceno
 
     mi_Biblioteca.mostrar_catalogo();
     mi_Biblioteca.mostrar_usuarios();
 
+    //Mostrando el historial de prestamos
+
+    mi_Biblioteca.mostrar_prestamos();
 
     return 0;
 }
